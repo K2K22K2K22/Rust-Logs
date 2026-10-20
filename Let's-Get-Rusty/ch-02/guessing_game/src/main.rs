@@ -1,3 +1,4 @@
+use colored::*; //Used to Bring colours
 use rand::Rng;
 use std::cmp::Ordering; //cmp mean comparing and ordering is an enum which results in 3 things greater,less,equal
 use std::io;
@@ -36,10 +37,10 @@ fn main() {
         match guess.cmp(&secret_number) {
             // cmp returns ordering enum
             // match expression matches with all the possible return values
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
+            Ordering::Less => println!("{}", "Too small!".red()),
+            Ordering::Greater => println!("{}", "Too big!".red()),
             Ordering::Equal => {
-                println!("You win!");
+                println!("{}", "You win!".green());
                 break;
             }
         }
