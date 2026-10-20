@@ -16,12 +16,23 @@ fn main() {
             .expect("Failed to read line");
         println!("You guessed: {}", guess);
         /*
-         * trim Removes the white space at the beginnin or end of a line
-         * parse will convert the string type but it does not know what to convert the string type into
-         * so we annotate our variable and use the unsigned 32bit integer
-         * since parse could fail so it also returns an error
-         */
-        let guess: u32 = guess.trim().parse().expect("Please type a number!");
+        * trim Removes the white space at the beginnin or end of a line
+        * parse will convert the string type but it does not know what to convert the string type into
+        * so we annotate our variable and use the unsigned 32bit integer
+        * since parse could fail so it also returns an error (Parse return either OK or err)
+        * for invalid inputs it panics and exit the loop so we use match for to keep prompting unless a valid number
+
+        * Guess was earlier delcared as Variable Type String
+        * but is declared again as unsigned 32bit integer, this is called
+        * Shadowing (used where we want to convert a veriable type while keeping the same name)
+        */
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("Enter a Valid no.");
+                continue;
+            }
+        };
         match guess.cmp(&secret_number) {
             // cmp returns ordering enum
             // match expression matches with all the possible return values
