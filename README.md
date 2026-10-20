@@ -11,7 +11,7 @@ Rust-Logs/
 ├── LICENSE
 ├── .gitignore
 │
-└── lets-get-rusty/
+└── Let's-Get-Rusty/
     ├── ch-01/
     │   ├── lesson-01/
     │   │   └── main.rs
