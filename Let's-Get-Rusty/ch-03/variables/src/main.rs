@@ -16,4 +16,15 @@ fn main() {
     //in rust we can use _ to make no. more readable
     const HEAD_COUNT: u32 = 100_000;
     println!("The constant value is: {}", HEAD_COUNT);
+    
+    //Shadowing allow us to create a new variable using an existing name.... bascally overwrites it
+
+    //basically instead of making y mutable we can:
+    let y = 10;
+    println!("The value of y is: {}",y);
+    let y = "AK";
+    println!("The value of y is: {}",y);
+    //The First Y value is Shadow-ed by the second y value 
+    //We preserved Mutablility (both are immutable)
+    //We can even change the type of the same variable 
 }
