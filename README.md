@@ -24,6 +24,11 @@ Rust-Logs/
     └── ch-02/
         └── ...
 ```
+
+## Project Branches
+
+Each project has its own branch to keep learning commits organized. Browse the relevant branch to follow the project step by step and revisit each learning milestone.
+
 ### How to Run
 
 Install Rust using [rustup](https://rustup.rs/),then navigate to the directory of the lesson you want to run and execute:
@@ -31,12 +36,13 @@ Install Rust using [rustup](https://rustup.rs/),then navigate to the directory o
 cargo run
 ```
 
-**Note:** `cargo run` requires a `Cargo.toml` file in the lesson directory. The current `lesson-01` contains only `main.rs`, so you'll need to add a Cargo project structure or run it directly using `rustc`.
+**Note:** `cargo run` requires a `Cargo.toml` file in the lesson directory. Lessons containing only `main.rs` can be run directly using `rustc`.
+
 ### Learning Resources
 
-- [The Rust Programming Language - Official Book](https://doc.rust-lang.org/book/)
-- [Rustlings - Interactive Exercises](https://rustlings.rust-lang.org/)
-- [Let's Get Rusty ](https://www.youtube.com/playlist?list=PLai5B987bZ9CoVR-QEIN9foz4QCJ0H2Y8)
+- [The Rust Programming Language: Official Book](https://doc.rust-lang.org/book/)
+- [Rustlings: Interactive Exercises](https://rustlings.rust-lang.org/)
+- [Let's Get Rusty: Video Playlist](https://www.youtube.com/playlist?list=PLai5B987bZ9CoVR-QEIN9foz4QCJ0H2Y8)
 
 ### My Learning Approach
 
@@ -47,4 +53,4 @@ cargo run
 
 ### License
 
-My original code and notes are licensed under the [MIT License](https://github.com/K2K22K2K22/Rust-Logs/blob/main/LICENSE), unless otherwise specified. Third-party examples and tutorial-derived material remain subject to their original terms and are credited to their sources where applicable.
+My original code and notes are licensed under the [MIT License](LICENSE), unless otherwise specified. Third-party examples and tutorial-derived materials remain subject to their original terms and are credited to their sources where applicable.
