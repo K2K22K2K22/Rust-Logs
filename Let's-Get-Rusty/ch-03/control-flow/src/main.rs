@@ -1,22 +1,34 @@
 fn main() {
-    let number = 5;
-    if number < 10{ //should always be boolean
-        println!("first condition was true");
-    }else if number < 22 {
-        println!("second condition was true ");
-    } else{
-        println!("condition was false");
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+        if counter == 10{
+            break counter; // This would return counter 
+        }
+    };
+    println!("The result is {}", result);
+    
+    // 2nd type of loop
+    let mut number = 4;
+    while number != 0{
+        println!("{}!", number);
+        
+        number -= 1;
     }
-
-    //using if-else inside a let statment 
-    let condition = true ;
-    let a = if condition {5} else {6};
-
-    //loops
-    //first one 
-    loop {
-        println!("again!");
-        // untill used break it goes forever
-        break;
+    println!("LIFTOFF!!!");
+    
+    // 3rd type of loop
+    let a = [10, 20, 30, 40, 50];
+    
+    for element in a.iter(){ // iter() is used to iterate from the array
+        println!("The value is: {}", element);
     }
+    for num in 1..4 { // From 1 to 4 (4 is exclusive so it only runs till 3)
+    println!("{}!", num);
+    }
+    
+    // Line comment 
+    /* 
+      block comment
+     */
 }
